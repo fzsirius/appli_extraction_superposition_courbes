@@ -74,6 +74,8 @@ def app():
 
     # Convertir la colonne date/temps en datetime 
     lot_data[date_column] = pd.to_datetime(lot_data[date_column], errors='coerce')
+    st.write(lot_data[date_column].head())
+
 
     # --------------------------------------------------------------------------------
     # 4. Initialisation / stockage des sélections à la souris
