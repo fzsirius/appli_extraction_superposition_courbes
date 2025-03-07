@@ -73,7 +73,7 @@ def app():
     lot_data = data[data[lot_column] == current_lot].copy().reset_index(drop=True)
 
     # Convertir la colonne date/temps en datetime 
-    lot_data[date_column] = pd.to_datetime(lot_data[date_column], errors='coerce',dayfirst=True)
+    lot_data[date_column] = pd.to_datetime(lot_data[date_column], errors='coerce')
 
     # --------------------------------------------------------------------------------
     # 4. Initialisation / stockage des sélections à la souris
